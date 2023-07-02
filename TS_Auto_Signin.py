@@ -5,6 +5,7 @@ import bs4
 import re
 import os
 import pickle
+import random
 
 requests.packages.urllib3.disable_warnings()
 
@@ -56,7 +57,6 @@ questionid
 # 6 = 您最喜欢的餐馆名称
 # 7 = 驾驶执照的最后四位数字
 '''
-
 
 def pushplus(text, msg):
     url = 'http://www.pushplus.plus/send'
@@ -148,6 +148,8 @@ def t00ls_sign(session, t00ls_hash):
 
 def main():
     session=requests.session()
+    x = random.randint(1,60)
+    time.sleep(x*60)
     try:
         result,formhash=cookielogin(session)
         print("cookielogin")

@@ -5,9 +5,8 @@ name: t00ls auto signin
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
+
   schedule: 
     - cron: '25 9 * * *'
     
